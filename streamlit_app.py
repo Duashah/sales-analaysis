@@ -33,11 +33,11 @@ st.markdown(
 def dashboard():
     # Load and parse CSV files
     sales_df = pd.read_csv('sample.csv')
-    #predicted_df = pd.read_csv('predicted_sales.csv')
+    predicted_df = pd.read_csv('predicted_sales.csv')
 
     # Convert dates to datetime
     sales_df['Transaction Date'] = pd.to_datetime(sales_df['Transaction Date']).dt.date
-    #predicted_df['Transaction Date'] = pd.to_datetime(predicted_df[['Year', 'Month']].assign(DAY=10))
+    predicted_df['Transaction Date'] = pd.to_datetime(predicted_df[['Year', 'Month']].assign(DAY=10))
 
     # Sidebar filters for sales data
     st.sidebar.title("Sales Data Filters")
@@ -98,7 +98,7 @@ def dashboard():
     # # Sidebar filters for predicted sales data
     # st.sidebar.header('Sales Prediction Filters')
    
-    # product_name = st.sidebar.selectbox('Select Product Name for Prediction', predicted_df[predicted_df['Category'] == selected_category]['Product Name'].unique())
+     product_name = st.sidebar.selectbox('Select Product Name for Prediction', predicted_df[predicted_df['Category'] == selected_category]['Product Name'].unique())
     
     # st.header("Sales Prediction Data ")
     date_range = st.selectbox('Select Date Range for Prediction', ['1 month', '3 months', '6 months', '1 year'])
