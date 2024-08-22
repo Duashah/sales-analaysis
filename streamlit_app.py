@@ -104,10 +104,10 @@ def dashboard():
     date_range = st.selectbox('Select Date Range for Prediction', ['1 month', '3 months', '6 months', '1 year'])
 
     # Filter predicted sales data based on user input
-    #filtered_predicted = predicted_df[
-     #   (predicted_df['Category'] == selected_category) &
-      #  (predicted_df['Product Name'] == selected_product)
-   # ]
+    filtered_predicted = predicted_df[
+        (predicted_df['Category'] == selected_category) &
+        (predicted_df['Product Name'] == selected_product)
+    ]
      
    
 
