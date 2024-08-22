@@ -1,9 +1,6 @@
-
-
 setuptools==65.5.0
-
 distlib==0.3.6
-
+distutils-pytest
 streamlit==1.17.0
 pandas==2.0.3
 matplotlib==3.7.1
