@@ -97,8 +97,7 @@ def dashboard():
 
     # # Sidebar filters for predicted sales data
     # st.sidebar.header('Sales Prediction Filters')
-   
-     product_name = st.sidebar.selectbox('Select Product Name for Prediction', predicted_df[predicted_df['Category'] == selected_category]['Product Name'].unique())
+    product_name = st.sidebar.selectbox('Select Product Name for Prediction', predicted_df[predicted_df['Category'] == selected_category]['Product Name'].unique())
     
     # st.header("Sales Prediction Data ")
     date_range = st.selectbox('Select Date Range for Prediction', ['1 month', '3 months', '6 months', '1 year'])
